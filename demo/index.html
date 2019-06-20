@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <style>
+      body {
+        background: #fafafa;
+        font-family: "Segoe UI", sans-serif;
+      }
+      .card {
+        border-radius: 2px;
+        border: 1px solid #ddd;
+        background: #fff;
+        max-width: 480px;
+        margin: 32px auto;
+      }
+      .card > .header {
+        margin: 0;
+        padding: 8px 16px;
+        border-bottom: 1px solid #eee;
+      }
+      .card > .body {
+        padding: 8px 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2 class="header">V1</h2>
+      <div class="body">
+        <div id="v1s">Loading</div>
+        <div id="v1">Loading</div>
+      </div>
+    </div>
+    <div class="card">
+      <h2 class="header">V3</h2>
+      <div class="body">
+        <div id="v3s">Loading</div>
+        <div id="v3">Loading</div>
+      </div>
+    </div>
+    <div class="card">
+      <h2 class="header">V4</h2>
+      <div class="body">
+        <div id="v4s">Loading</div>
+        <div id="v4">Loading</div>
+      </div>
+    </div>
+    <div class="card">
+      <h2 class="header">V5</h2>
+      <div class="body">
+        <div id="v5s">Loading</div>
+        <div id="v5">Loading</div>
+      </div>
+    </div>
+  </body>
+  <script type="module">
+    //standalone imports
+    import uuidv1 from "../v1.js";
+    import uuidv3 from "../v3.js";
+    import uuidv4 from "../v4.js";
+    import uuidv5 from "../v5.js";
+    const v1s = uuidv1();
+    const v3s = uuidv3("hello.example.com", uuidv3.DNS);
+    const v4s = uuidv4();
+    const v5s = uuidv5("hello.example.com", uuidv5.DNS);
+
+    const bind = {
+      v1s,
+      v3s,
+      v4s,
+      v5s
+    };
+    let keys = Object.keys(bind);
+    keys.forEach(k => {
+      document.querySelector("#" + k).textContent = bind[k];
+    });
+  </script>
+
+  <script type="module">
+    //import from index
+    import { uuidv1, uuidv3, uuidv4, uuidv5 } from "../index.js";
+    const v1 = uuidv1();
+    const v3 = uuidv3("http://hello.example.com", uuidv3.URL);
+    const v4 = uuidv4();
+    const v5 = uuidv5("http://hello.example.com", uuidv5.URL);
+
+    const bind = {
+      v1,
+      v3,
+      v4,
+      v5
+    };
+    let keys = Object.keys(bind);
+    keys.forEach(k => {
+      document.querySelector("#" + k).textContent = bind[k];
+    });
+  </script>
+</html>
