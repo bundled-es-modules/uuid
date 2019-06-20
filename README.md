@@ -6,13 +6,13 @@ This is a mirror of [uuid](https://www.npmjs.com/package/uuid), bundled and expo
 
 This mirror has been created because [uuid](https://www.npmjs.com/package/uuid) uses CommonJS. _Support for es modules has been requested [here (#245)](https://github.com/kelektiv/node-uuid/issues/245)_
 
-## Install
+## Usage
+
+### Installing
 
 ```bash
 npm install @bundled-es-modules/uuid
 ```
-
-## Usage
 
 ### Importing
 
