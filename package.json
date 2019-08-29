@@ -1,6 +1,6 @@
 {
   "name": "@bundled-es-modules/uuid",
-  "version": "3.3.2-rc2",
+  "version": "3.3.2",
   "description": "mirror of uuid, bundled and exposed as ES module",
   "author": "Rob Resendez (resendez.java@gmail.com)",
   "main": "index.js",
