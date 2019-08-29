@@ -5,6 +5,7 @@
   "author": "Rob Resendez (resendez.java@gmail.com)",
   "main": "index.js",
   "module": "index.js",
+  "type": "module",
   "publishConfig": {
     "access": "public"
   },
