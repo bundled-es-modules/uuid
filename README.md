@@ -1,3 +1,19 @@
+# ⛔️ Deprecated
+
+ESM exports are now available directly from [uuid](https://www.npmjs.com/package/uuid).  Additionally, types are available via [@types/uuid](https://www.npmjs.com/package/@types/uuid)
+
+Enjoy using `uuid` directly from its maintainer
+
+```bash
+npm i --save uuid
+npm i --save @types/uuid
+```
+
+```js
+import { v4 as uuidv4 } from 'uuid';
+uuidv4();
+```
+
 # uuid
 
 This is a mirror of [uuid](https://www.npmjs.com/package/uuid), bundled and exposed as ES module
